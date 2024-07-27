@@ -142,6 +142,15 @@ Run ensemble teacher student adverserial training with teacher and Siren as stud
 python run_siren_adv_training.py --teacher=best
 ```
 
+### Ensemble Selection
+The ensemble is selected by a [forward stepwise selection](https://www.cs.cornell.edu/~alexn/papers/shotgun.icml04.revised.rev2.pdf) algorithm:
+1. Start with empty ensemble
+2. Add the model to the ensemble that minimizes the ensemble validation loss
+3. Repeat step 2 until no improvement can be achieved
+4. Return ensemble
+
+The implementation of the ensemble selection can be seen in ```ensemble_selection.ipynb```.
+
 
 
 
