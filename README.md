@@ -55,6 +55,12 @@ Run isotropic without activation motivated from [here](https://arxiv.org/pdf/161
 ```
 python run_isotropic_training.py  --model=noact
 ```
+Navigate to Isotropic_HPO and run isotropic hyper parameter optimization. 
+```
+python run_isotropic_hpo.py 
+```
+
+
 
 ### Siren
 Run siren training
@@ -144,6 +150,7 @@ python run_siren_adv_training.py --teacher=best
 
 ### Ensemble Selection
 The ensemble is selected by a [forward stepwise selection](https://www.cs.cornell.edu/~alexn/papers/shotgun.icml04.revised.rev2.pdf) algorithm:
+
 1. Start with empty ensemble
 2. Add the model to the ensemble that minimizes the ensemble validation loss
 3. Repeat step 2 until no improvement can be achieved
