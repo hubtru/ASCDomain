@@ -59,6 +59,8 @@ Navigate to Isotropic_HPO and run isotropic hyper parameter optimization.
 ```
 python run_isotropic_hpo.py 
 ```
+ Isotropic Notebook Demonstrator 
+  [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/hubtru/ASCDomain/blob/main/demo/ASC_Domain_Isotropic_Demo.ipynb)
 
 
 
@@ -67,6 +69,8 @@ Run siren training
 ```
 python run_siren_training.py 
 ```
+ Siren Notebook Demonstrator 
+  [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/hubtru/ASCDomain/blob/main/demo/ASC_Domain_Siren_Demo.ipynb)
 
 ## Domain Generalization Techniques
 Previous domain generalization techniques have used augmentation to generalization. For next two achitectures we conduct representation learning experiments with the isotropic architecture as a backbone model. Two representation learning techniques from [DeepDG](https://github.com/jindongwang/transferlearning/tree/master/code/DeepDG) were chosen:
