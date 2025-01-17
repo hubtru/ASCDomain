@@ -1,3 +1,6 @@
+[![Hugging Face Spaces](https://img.shields.io/badge/Hugging%20Face-Spaces-blue?logo=huggingface)](https://huggingface.co/spaces/hubtru/ASCDomain)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/hubtru/ASCDomain/blob/main/demo/ASC_Domain_Isotropic_Demo.ipynb)
+
 <!-- # DCASE24_Task1
 Data loader and solution method for the DCASE 2024 Challenge Task1 
 
