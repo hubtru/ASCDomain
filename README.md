@@ -8,15 +8,25 @@ Task 1: Data-Efficient Low-Complexity Acoustic Scene Classification
 
 Official DCASE Task desciption: https://dcase.community/challenge2024/task-data-efficient-low-complexity-acoustic-scene-classification -->
 
-# ASC Domain
-This repository contains the code to reproduce the results of the Truchan_LUH submission to  [DCASE24 Task 1 "Data-Efficient Low-Complexity Acoustic Scene Classification"](https://dcase.community/challenge2024/task-data-efficient-low-complexity-acoustic-scene-classification) challenge.
+# ASCDomain: Domain Invariant Device-Adversarial Isotropic Knowledge Distillation Convolutional Neural Architecture
+This repository is official Pytorch implementaion of ASCDomain ([ICASSP 2025](https://2025.ieeeicassp.org/)). It contains the code to reproduce the results of the Truchan_LUH submission to  [DCASE24 Task 1 "Data-Efficient Low-Complexity Acoustic Scene Classification"](https://dcase.community/challenge2024/task-data-efficient-low-complexity-acoustic-scene-classification) challenge.
 
-- Technical Report:[here](https://dcase.community/documents/challenge2024/technical_reports/DCASE2024_Truchan_3_t1.pdf)
+- ASCDomain Paper: [here](https://ieeexplore.ieee.org/document/10890739)
+- Technical Report: [here](https://dcase.community/documents/challenge2024/technical_reports/DCASE2024_Truchan_3_t1.pdf)
 - System Results: [here](https://dcase.community/challenge2024/task-data-efficient-low-complexity-acoustic-scene-classification-results)
 
 The codebase for this repository is the baseline for task1: [here](https://github.com/CPJKU/dcase2024_task1_baseline)
 
+# ASCDomain Architecture 
+ASCDomain integrates four key components: Preprocessing, Lightweight Isotropic Neural Network , Adversarial Domain Adaptation, and ensemble Knowledge-Distillation. 
+Figure presents the ASCDomain workflow.  Solid lines indicate the training and validation phase, and dashed lines indicate the train phase.
+- The inputs to the network are teh audio snippets [1s], audio labels and device lables. 
+- The audio snippets first go through preprocessing, transforming them into Mel-Spectograms [256 x 65].
+- The isotropic network extracts the features from the time-frequency representation. 
+- Adversarial Domain Adaptation encourages embedding representation to become domain-invariant (genaralization across different recording devices).
+- Ensemble Knowledge Distillation improves learning efficiency by transferring knowledge from multiple high-performance teacher models to a compact student model. 
 
+![figure](ASCDomain.png)
 ## Setup
 Create a conda environment
 ```
@@ -165,7 +175,19 @@ The ensemble is selected by a [forward stepwise selection](https://www.cs.cornel
 
 The implementation of the ensemble selection can be seen in ```ensemble_selection.ipynb```.
 
+## Citing
+If you find ASCDomain useful for your work, please consider citing us as follows:
 
+```BibTeX
+@inproceedings{truchan2025ascdomain,
+  title={ASCDomain: Domain Invariant Device-Adversarial Isotropic Knowledge Distillation Convolutional Neural Architecture},
+  author={Truchan, Hubert and Ngo, Tien Hung and Ahmadi, Zahra},
+  booktitle={ICASSP 2025-2025 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},
+  pages={1--5},
+  year={2025},
+  organization={IEEE}
+}
+```
 
 
 
