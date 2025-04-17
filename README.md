@@ -20,7 +20,7 @@ The codebase for this repository is the baseline for task1: [here](https://githu
 # ASCDomain Architecture 
 ASCDomain integrates four key components: Preprocessing, Lightweight Isotropic Neural Network , Adversarial Domain Adaptation, and ensemble Knowledge-Distillation. 
 Figure presents the ASCDomain workflow.  Solid lines indicate the training and validation phase, and dashed lines indicate the train phase.
-- The inputs to the network are teh audio snippets [1s], audio labels and device lables. 
+- The inputs to the network are the audio snippets [1s], audio labels and device lables. 
 - The audio snippets first go through preprocessing, transforming them into Mel-Spectograms [256 x 65].
 - The isotropic network extracts the features from the time-frequency representation. 
 - Adversarial Domain Adaptation encourages embedding representation to become domain-invariant (genaralization across different recording devices).
